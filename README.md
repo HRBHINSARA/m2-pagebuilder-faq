@@ -21,7 +21,7 @@ Clone the repository into the `app/code/Hrb/PageBuilderVideoExtras` directory of
 
 ```bash
 cd /path/to/your/magento/root
-git clone https://github.com/HRBHINSARA/m2-pagebuilder-faq.git app/code/
+git clone https://github.com/HRBHINSARA/m2-pagebuilder-faq.git app/code/Hrb/PageBuilderVideoExtras
 ```
 ### 2. Enable the Module
 

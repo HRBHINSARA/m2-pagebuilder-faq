@@ -1,0 +1,39 @@
+@border-color: #ccc;
+
+.pagebuilder-faq {
+    border: 1px solid transparent;
+    width: 100%;
+}
+
+.pagebuilder-content-type {
+    &.pagebuilder-faq-item {
+        border: 1px solid @border-color;
+
+        .placeholder-text {
+            left: 5px;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+        }
+
+        &.pagebuilder-content-type-active {
+            border: 1px solid @border-color;
+        }
+
+        .pagebuilder-toolbar-active {
+            .tox {
+                &.tox-tinymce {
+                    &.tox-tinymce-inline {
+                        top: 0 !important;
+                    }
+                }
+            }
+        }
+
+        &.type-nested {
+            &.faq-item {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

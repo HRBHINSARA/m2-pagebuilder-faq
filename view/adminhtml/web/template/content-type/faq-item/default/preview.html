@@ -1,0 +1,29 @@
+<div class="pagebuilder-content-type pagebuilder-faq-item type-nested"
+     attr="Object.assign({}, {id: parent.id}, data.main.attributes)" ko-style="data.main.style" css="data.main.css"
+     event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <render args="getOptions().template"></render>
+    <div data-role="content">
+        <div if="isWysiwygSupported()" class="inline-wysiwyg-question" ko-style="data.main.style" css="data.main.css"
+             attr="data.question.attributes" afterRender="initWysiwygQuestion">
+            <div html="data.question.html"></div>
+        </div>
+        <div if="isWysiwygSupported()" class="placeholder-text-question" ifnot="data.question.html"
+             translate="'Edit question here.'"></div>
+        <div ifnot="isWysiwygSupported()">
+            <textarea class="inline-wysiwyg-textarea" afterRender="initTextareaQuestion"
+                      event="{keyup: onTextareaKeyUpQuestion, focus: onTextareaFocus, blur: onTextareaBlur}"
+                      data-bind="attr: { placeholder: $t('Edit question here.') }"></textarea>
+        </div>
+        <div if="isWysiwygSupported()" class="inline-wysiwyg-answer" ko-style="data.main.style" css="data.main.css"
+             attr="data.answer.attributes" afterRender="initWysiwyg">
+            <div html="data.answer.html"></div>
+        </div>
+        <div if="isWysiwygSupported()" class="placeholder-text" ifnot="data.answer.html"
+             translate="'Edit answer here.'"></div>
+        <div ifnot="isWysiwygSupported()">
+            <textarea class="inline-wysiwyg-textarea" afterRender="initTextarea"
+                      event="{keyup: onTextareaKeyUp, focus: onTextareaFocus, blur: onTextareaBlur}"
+                      data-bind="attr: { placeholder: $t('Edit answer here.') }"></textarea>
+        </div>
+    </div>
+</div>
